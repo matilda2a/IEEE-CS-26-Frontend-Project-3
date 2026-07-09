@@ -4,11 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bazar Qaa Al Hamoor | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 </head>
 
 <body>
+    <div class="auth-wrapper">
 
+        <div class="auth-visual">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+
+            <div class="auth-visual-logo">
+                <i class="fa-solid fa-shell"></i>
+                Bazar Qaa Al Hamoor
+            </div>
+
+            <div class="auth-characters">
+                <img src="assets/images/patrick.png" alt="Patrick">
+                <img src="assets/images/spongebob.png" alt="SpongeBob">
+                <img src="assets/images/squidward.png" alt="Squidward">
+            </div>
+
+            <div class="auth-visual-text">
+                <h2>Welcome Back!</h2>
+                <p>Your favorite Bikini Bottom characters are waiting for you. Log in and explore their unique stores!
+                </p>
+            </div>
+        </div>
+
+        <div class="auth-form-side">
+            <div class="auth-form-container">
+
+                <div class="auth-form-header">
+                    <h1>Login</h1>
+                    <p>Good to see you again! Enter your credentials to continue.</p>
+                </div>
+
+                <div id="globalError"></div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" placeholder="spongebob@krustykrab.com">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="form-error">Please enter a valid email address.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" placeholder="••••••••">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="form-error">Password is required.</div>
+                    </div>
+
+                    <button type="submit" class="btn-auth">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Login to My Account
+                    </button>
+                </form>
+
+                <div class="auth-switch">
+                    Don't have an account? <a href="signup.html">Sign Up for free</a>
+                </div>
+
+                <div class="auth-switch" style="margin-top: 1rem;">
+                    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/auth.js"></script>
 </body>
 
 </html>
