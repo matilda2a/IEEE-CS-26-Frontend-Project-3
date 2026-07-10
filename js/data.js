@@ -27,11 +27,38 @@ export const products = [
     price: 80,
     },
 
+      {
+        id:4,
+        name: "SpongeBed",
+        category: "SpongeBob",
+        image:"/assets/images/SpongeBed.jpg",
+        description: "A cozy bed ",
+        price:500
+    },
+
+    {
+    id: 5,
+    name: "Chef Hat",
+    category: "SpongeBob",
+    image: "/assets/images/Chef Hat.jpg",
+    description: "Official hat for the Krusty Krab fry cook",
+    price: 20,
+    },
+
+    {
+    id: 6,
+    name: "Kelp Shake",
+    category: "SpongeBob",
+    image: "/assets/images/Kelp Shake.jpg",
+    description: "The famous green drink",
+    price: 8,
+    },
+
     
     
     // Patrick products
     {
-        id:4,
+        id:7,
         name: "Bubble blower",
         category: "Patrick",
         image: "/assets/images/Bubble blower.jpg",
@@ -40,7 +67,7 @@ export const products = [
     },
 
     {
-        id:5,
+        id:8,
         name: "Alarm Clock",
         category: "Patrick",
         image: "/assets/images/alarm.jpg",
@@ -49,7 +76,7 @@ export const products = [
     },
 
     {
-        id:6,
+        id:9,
         name: "Patrick's Shorts",
         category: "Patrick",
         image: "/assets/images/Patrick's Shorts.jpg",
@@ -57,9 +84,36 @@ export const products = [
         price: 50,
     },
 
+      {
+        id:10,
+        name: "Rock House",
+        category: "Patrick",
+        image:"/assets/images/Rock House.jpg",
+        description: "The most stylish rock in Bikini Bottom",
+        price:500,
+    },
+
+    {
+    id: 11,
+    name: "Sea Star Sunscreen",
+    category: "Patrick",
+    image: "/assets/images/sunscreen.jpg",
+    description: "Protection for a star's skin",
+    price: 12,
+    },
+
+    {
+    id: 12,
+    name: "Ice Cream",
+    category: "Patrick",
+    image: "/assets/images/Ice Cream.jpg",
+    description: "A melting delight on a hot day",
+    price: 10,
+    },
+
     // Mr. Krabs products
     {
-        id:7,
+        id:13,
         name: "Cash safe",
         category: "Mr. Krabs",
         image: "/assets/images/Cash safe.jpg",
@@ -68,7 +122,7 @@ export const products = [
     },
 
     {
-        id:8,
+        id:14,
         name: "Mr.Krabs Hat",
         category: "Mr. Krabs",
         image: "/assets/images/krabs-hat.jpg",
@@ -77,7 +131,7 @@ export const products = [
     },
 
     {
-        id:9,
+        id:15,
         name: "Money Bag",
         category: "Mr. Krabs",
         image: "/assets/images/money-bag.jpg",
@@ -85,10 +139,37 @@ export const products = [
         price: 400,
     },
 
+      {
+        id:16,
+        name: "Dollar Bill",
+        category: "Mr. Krabs",
+        image:"/assets/images/Dollar Bill.jpg",
+        description: "The first dollar ever earned",
+        price:5,
+    },
+
+    {
+    id: 17,
+    name: "Manager Badge",
+    category: "Mr. Krabs",
+    image: "/assets/images/Manager Badge.jpg",
+    description: "Show everyone who's boss",
+    price: 30,
+    },
+
+    {
+    id: 18,
+    name: "Fancy Anchor Chair",
+    category: "Mr. Krabs",
+    image: "/assets/images/Office Chair.jpg",
+    description: "An office chair made for a crab",
+    price: 180,
+    },
+
      //Squidward products
 
     {
-        id:10,
+        id:19,
         name: "Clarinet",
         category: "Squidward",
         image: "/assets/images/clarinet.jpg",
@@ -97,7 +178,7 @@ export const products = [
     },
 
     {
-        id:11,
+        id:20,
         name: "Fine art oil painting",
         category: "Squidward",
         image: "/assets/images/painting.jpg",
@@ -106,12 +187,39 @@ export const products = [
     },
 
     {
-        id:12,
+        id:21,
         name: "Lounge Chair",
         category: "Squidward",
         image: "/assets/images/lounge-chair.jpg",
         description: "To sit quietly, away from the noise of SpongeBob and Patrick",
         price: 150,
+    },
+
+      {
+        id:22,
+        name: "Artistic Beret",
+        category: "Squidward",
+        image:"/assets/images/beret.jpg",
+        description: "Essential for every artist",
+        price:30,
+    },
+
+    {
+    id:23,
+    name: "Self Portrait",
+    category: "Squidward",
+    image: "/assets/images/self.jpg",
+    description: "A masterpiece of art",
+    price: 350,
+    },
+
+    {
+    id:24,
+    name: "Masterpiece Paintbrush",
+    category: "Squidward",
+    image: "/assets/images/paintbrush.jpg",
+    description: "For painting those 'abstract' portraits that only true artists understand",
+    price: 80,
     },
 
 ]
