@@ -4,54 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart | Hamour Bazaar</title>
+    <title>Bazar Qaa Al Hamoor | Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/cart.css">
 </head>
 
 <body>
 
     <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-shell" style="color: #F9A8D4;"></i> Bazar Qaa Al Hamoor
+            </a>
 
-    <header class="navbar">
-        <div class="container">
-            <!-- Logo -->
-            <a href="" id="logoLink" class="logo">🐟 Hamour <span>Bazaar</span></a>
-            <!-- Navigation -->
-            <nav>
-                <a href="" id="homeLink">Home</a>
-                <a href="" id="productsLink">Products</a>
-                <a href="cart.html" class="active">Cart<span id="cartCount">0</span></a>
-            </nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Characters</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#footer">About Us</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="globalSearch" placeholder="Search for a product...">
+                </div>
+                <a href="cart.html" class="cart-icon active">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <div id="authContainer">
+                    <a href="login.html" class="login-link"><i class="fa-regular fa-user"></i> Login</a>
+                </div>
+                <button class="menu" id="menu" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Hero -->
-
-    <section class="hero">
+    <section class="cart-hero">
         <h1>Your Shopping Cart</h1>
         <p>Review your selected products before checkout.</p>
     </section>
 
     <!-- Empty Cart -->
-
-    <section id="emptyCart" class="empty-cart">
+    <section id="emptyCart" class="empty-cart" style="display: none;">
         <div class="empty-box">
             <h2>Your Cart Is Empty 🛒</h2>
             <p>Looks like you haven't added any products yet.</p>
-            <a href="" id="goShoppingBtn" class="btn">Go Shopping</a>
+            <a href="products.html" id="goShoppingBtn" class="btn btn-primary">Go Shopping</a>
         </div>
     </section>
 
     <!-- Cart -->
-
-    <section id="cartSection" class="cart-section">
+    <section id="cartSection" class="cart-section container">
         <div class="products-area">
             <h2>Products</h2>
             <div id="cartItems"> <!--java script creates cards--> </div>
         </div>
 
         <!-- Order Summary -->
-
         <aside class="summary">
             <h2>Order Summary</h2>
             <p class="summary-text">Review your order before completing the purchase.</p>
@@ -70,14 +89,13 @@
                     <span id="totalPrice">$0.00</span>
                 </div>
             </div>
-            <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
-            <button id="clearCartBtn" class="clear-btn">Clear Shopping Cart</button>
+            <button id="checkoutBtn" class="checkout-btn btn btn-primary">Proceed to Checkout</button>
+            <button id="clearCartBtn" class="clear-btn btn btn-light">Clear Shopping Cart</button>
             <p class="summary-note">🚚 Free shipping on all orders.</p>
         </aside>
     </section>
 
-    <!-- Checkout -->
-
+    <!-- Checkout Modal -->
     <div class="modal" id="checkoutModal">
         <div class="modal-content">
             <div class="success-icon">✅</div>
@@ -85,10 +103,67 @@
             <p>Thank you for shopping with <strong>Hamour Bazaar</strong>.
                 <br>Your order has been received successfully.
             </p>
-            <button id="closeModal">Continue Shopping</button>
+            <button id="closeModal" class="btn btn-primary">Continue Shopping</button>
         </div>
     </div>
-    <script src="js/cart.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer" style="margin-top: 50px;">
+        <div class="container footer-grid">
+            <div class="footer-col about-col">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-shell" style="color: #F9A8D4;"></i> Bazar Qaa Al Hamoor
+                </a>
+                <p>All Bikini Bottom characters in one place. A fun and unique shopping experience!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html#offers">Offers</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col help-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <div class="contact-info">
+                    <p><i class="fa-regular fa-envelope"></i> support@bazarqa3.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 120 001 0382</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Bikini Bottom, Pacific Ocean</p>
+                </div>
+            </div>
+            <div class="footer-col newsletter-col">
+                <h4>Subscribe to our Newsletter</h4>
+                <p>Subscribe to receive all new offers and exclusive products.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bazar Qaa Al Hamoor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/cart.js" type="module"></script>
 </body>
 
 </html>

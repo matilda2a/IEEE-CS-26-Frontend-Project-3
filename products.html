@@ -1,20 +1,144 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منتجات بازار قاع الهامور</title>
-
-    <link rel="stylesheet" href="css/all.min.css">
-
+    <title>Bazar Qaa Al Hamoor | Products</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/products.css">
 </head>
 
 <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-shell" style="color: #F9A8D4;"></i> Bazar Qaa Al Hamoor
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Characters</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="index.html#footer">About Us</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="globalSearch" placeholder="Search for a product...">
+                </div>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <div id="authContainer">
+                    <a href="login.html" class="login-link"><i class="fa-regular fa-user"></i> Login</a>
+                </div>
+                <button class="menu" id="menu" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <div class="container products-page">
+        <div class="products-header">
+            <h2>All Products</h2>
+            <div class="products-controls">
+                <div class="control-group">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter">
+                        <option value="All">All Categories</option>
+                        <option value="SpongeBob">SpongeBob</option>
+                        <option value="Patrick">Patrick</option>
+                        <option value="Mr. Krabs">Mr. Krabs</option>
+                        <option value="Squidward">Squidward</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="priceSort">Sort by:</label>
+                    <select id="priceSort">
+                        <option value="default">Default</option>
+                        <option value="lowToHigh">Price: Low to High</option>
+                        <option value="highToLow">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <section id="products-container" class="products-grid"></section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+
+            <div class="footer-col about-col">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-shell" style="color: #F9A8D4;"></i> Bazar Qaa Al Hamoor
+                </a>
+                <p>All Bikini Bottom characters in one place. A fun and unique shopping experience!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html#offers">Offers</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col help-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <div class="contact-info">
+                    <p><i class="fa-regular fa-envelope"></i> support@bazarqa3.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 120 001 0382</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Bikini Bottom, Pacific Ocean</p>
+                </div>
+            </div>
+
+            <div class="footer-col newsletter-col">
+                <h4>Subscribe to our Newsletter</h4>
+                <p>Subscribe to receive all new offers and exclusive products.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bazar Qaa Al Hamoor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/products.js" type="module"></script>
 </body>
-<section id="products-container" class="products-grid"></section>
-<script src="js/main.js" type="module"></script>
+
 </html>
