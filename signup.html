@@ -1,14 +1,108 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bazar Qaa Al Hamoor | Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 </head>
 
 <body>
+    <div class="auth-wrapper">
 
+        <div class="auth-visual">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+
+            <div class="auth-visual-logo">
+                <i class="fa-solid fa-shell"></i>
+                Bazar Qaa Al Hamoor
+            </div>
+
+            <div class="auth-characters">
+                <img src="assets/images/mrkrabs.png" alt="Mr. Krabs">
+                <img src="assets/images/spongebob.png" alt="SpongeBob">
+                <img src="assets/images/patrick.png" alt="Patrick">
+            </div>
+
+            <div class="auth-visual-text">
+                <h2>Join the Crew!</h2>
+                <p>Create your account and dive into the most unique shopping experience in Bikini Bottom!</p>
+            </div>
+        </div>
+
+        <div class="auth-form-side">
+            <div class="auth-form-container">
+
+                <div class="auth-form-header">
+                    <h1>Create Account</h1>
+                    <p>Fill in your details below to get started.</p>
+                </div>
+
+                <div id="globalError"></div>
+
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="fullName" placeholder="SpongeBob SquarePants">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="form-error">Name must be at least 3 characters.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" placeholder="spongebob@krustykrab.com">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="form-error">Please enter a valid email address.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" placeholder="••••••••">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="form-error">Password must be at least 6 characters.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="confirmPassword" placeholder="••••••••">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="form-error">Passwords do not match.</div>
+                    </div>
+
+                    <button type="submit" class="btn-auth">
+                        <i class="fa-solid fa-user-plus"></i> Create My Account
+                    </button>
+                </form>
+
+                <div class="auth-switch">
+                    Already have an account? <a href="login.html">Login here</a>
+                </div>
+
+                <div class="auth-switch" style="margin-top: 1rem;">
+                    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/auth.js"></script>
 </body>
 
 </html>
