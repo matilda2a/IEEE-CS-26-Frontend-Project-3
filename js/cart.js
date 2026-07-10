@@ -21,13 +21,13 @@ const closeModal = document.getElementById("closeModal");
 
 /* Get Cart From Storage */
 
-// let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 /* Save Cart */
 
-// function saveCart() {
-//     localStorage.setItem("cart", JSON.stringify(cart));
-// }
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 /* Update Summary */
 
