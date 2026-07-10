@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initHamburger();
 });
 
+window.updateCartCount = updateCartCount;
+
 function initHamburger() {
-    const menuBtn  = document.getElementById('menu');
+    const menuBtn = document.getElementById('menu');
     const navLinks = document.getElementById('navLinks');
-    const overlay  = document.getElementById('navOverlay');
+    const overlay = document.getElementById('navOverlay');
     if (!menuBtn) return;
 
     function openMenu() {
@@ -45,13 +47,13 @@ function updateNavbar() {
         const user = JSON.parse(loggedInUser);
         authContainer.innerHTML = `
             <div style="display: flex; align-items: center; gap: 1rem;">
-                <span style="font-weight: 600; color: var(--secondary-color);">Hi, ${user.name.split(' ')[0]}</span>
-                <button onclick="logout()" class="btn btn-secondary" style="padding: 0.4rem 1rem;">Logout</button>
+                <span style="font-weight: 600; color: var(--text-color);">Hi, ${user.name.split(' ')[0]}</span>
+                <button onclick="logout()" class="btn btn-primary" style="padding: 0.4rem 1rem;">Logout</button>
             </div>
         `;
     } else {
         authContainer.innerHTML = `
-            <a href="login.html" class="btn btn-primary">Login</a>
+            <a href="login.html" class="login-link"><i class="fa-regular fa-user"></i> Login</a>
         `;
     }
 }
@@ -68,43 +70,5 @@ function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-    cartCountElement.textContent = `(${totalItems})`;
+    cartCountElement.textContent = totalItems;
 }
-
-
-import { products } from "./data.js";
-
-function displayProducts (){
-    const container = document.getElementById("products-container")
-    const params = new URLSearchParams(window.location.search)
-    const type = params.get("category")
-
-    let filtered =[]
-    if (type === "SpongeBob"){
-        filtered = products.filter(product => product.category === "SpongeBob")
-    }
-    else if(type === "Patrick") {
-        filtered = products.filter(p => p.category === "Patrick")
-    }
-    else if(type === "Mr. Krabs") {
-        filtered = products.filter(p => p.category === "Mr. Krabs")
-    }
-    else if(type === "Squidward") {
-        filtered = products.filter(p => p.category === "Squidward")
-    }
-    else{
-        filtered = products
-    }
-
-    container.innerHTML = filtered.map(product => `
-        <div class="product-card">
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>Price: ${product.price} $</p>
-            <p>Category: ${product.category}</p>
-          <button class="details"><a href="product-details.html?id=${product.id}">Show Details</a></button>
-        </div>
-        `
-    ).join("")
-}
-displayProducts()
