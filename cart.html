@@ -1,18 +1,94 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عربة التسوق - بازار قاع الهامور</title>
-
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <title>Shopping Cart | Hamour Bazaar</title>
     <link rel="stylesheet" href="css/cart.css">
 </head>
 
 <body>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="" id="logoLink" class="logo">🐟 Hamour <span>Bazaar</span></a>
+            <!-- Navigation -->
+            <nav>
+                <a href="" id="homeLink">Home</a>
+                <a href="" id="productsLink">Products</a>
+                <a href="cart.html" class="active">Cart<span id="cartCount">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+        <h1>Your Shopping Cart</h1>
+        <p>Review your selected products before checkout.</p>
+    </section>
+
+    <!-- Empty Cart -->
+
+    <section id="emptyCart" class="empty-cart">
+        <div class="empty-box">
+            <h2>Your Cart Is Empty 🛒</h2>
+            <p>Looks like you haven't added any products yet.</p>
+            <a href="" id="goShoppingBtn" class="btn">Go Shopping</a>
+        </div>
+    </section>
+
+    <!-- Cart -->
+
+    <section id="cartSection" class="cart-section">
+        <div class="products-area">
+            <h2>Products</h2>
+            <div id="cartItems"> <!--java script creates cards--> </div>
+        </div>
+
+        <!-- Order Summary -->
+
+        <aside class="summary">
+            <h2>Order Summary</h2>
+            <p class="summary-text">Review your order before completing the purchase.</p>
+            <div class="summary-box">
+                <div class="summary-row">
+                    <span>Total Quantity</span>
+                    <span id="totalQuantity">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Products</span>
+                    <span id="totalProducts">0</span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Total Price</span>
+                    <span id="totalPrice">$0.00</span>
+                </div>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
+            <button id="clearCartBtn" class="clear-btn">Clear Shopping Cart</button>
+            <p class="summary-note">🚚 Free shipping on all orders.</p>
+        </aside>
+    </section>
+
+    <!-- Checkout -->
+
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="success-icon">✅</div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for shopping with <strong>Hamour Bazaar</strong>.
+                <br>Your order has been received successfully.
+            </p>
+            <button id="closeModal">Continue Shopping</button>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
