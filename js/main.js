@@ -70,3 +70,41 @@ function updateCartCount() {
 
     cartCountElement.textContent = `(${totalItems})`;
 }
+
+
+import { products } from "./data.js";
+
+function displayProducts (){
+    const container = document.getElementById("products-container")
+    const params = new URLSearchParams(window.location.search)
+    const type = params.get("category")
+
+    let filtered =[]
+    if (type === "SpongeBob"){
+        filtered = products.filter(product => product.category === "SpongeBob")
+    }
+    else if(type === "Patrick") {
+        filtered = products.filter(p => p.category === "Patrick")
+    }
+    else if(type === "Mr. Krabs") {
+        filtered = products.filter(p => p.category === "Mr. Krabs")
+    }
+    else if(type === "Squidward") {
+        filtered = products.filter(p => p.category === "Squidward")
+    }
+    else{
+        filtered = products
+    }
+
+    container.innerHTML = filtered.map(product => `
+        <div class="product-card">
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>Price: ${product.price} $</p>
+            <p>Category: ${product.category}</p>
+          <button class="details"><a href="product-details.html?id=${product.id}">Show Details</a></button>
+        </div>
+        `
+    ).join("")
+}
+displayProducts()
